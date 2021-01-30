@@ -1,1 +1,15 @@
-<h2>Available drones</h2>
+<h1 style='text-align:center;'>Available drones</h1>
+<ul class='drones-list' style='list-style: none'>
+    {{#each drones}}
+    <li style='text-align:center; margin-top: 20px;'>
+        <h3>Name: {{this.name}}</h3>
+        <h5>Propellers: {{this.propellers}}</h5>
+        <h5>Max Speed: {{this.maxSpeed}}</h5>
+        <a href="/drones/{{_id}}/edit">Edit</a>
+        <a href="/drones/{{_id}}/delete">Delete</a>
+    </li>
+
+    {{/each}}
+
+    <a href="/drones/create" sytle=''><button>Create New Drone</button></a>
+</ul>
